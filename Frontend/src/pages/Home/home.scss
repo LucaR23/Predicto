@@ -1,0 +1,71 @@
+@import "../../colors.scss";
+
+/*SECTION*/
+.animated-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-home {
+  height: 440px;
+  width: 350px;
+  box-shadow: 1px 6px 15px 1px rgb(0 0 0 / 25%);
+  border-radius: 20px;
+  box-shadow: none;
+  transition: 0.6s;
+}
+
+.card-home:hover {
+  
+  box-shadow: 8px 10px 26px 3px $blue-600;
+}
+
+
+.istat {
+  transition: 0.5;
+  background-color: $blue-300;
+}
+
+.staticwave{
+margin-bottom: -10px;
+}
+  
+.card > svg {
+  width: 55%;
+  margin: auto;
+}
+
+/*GOOGLE MAP*/
+
+iframe {
+  width: 100%;
+
+  box-shadow: 1px 6px 15px 1px rgb(0 0 0 / 25%);
+  border-radius: 20px;
+}
+
+/*MEDIA SCREEN*/
+
+@media only screen and (min-width: 768px) {
+  .col-h-100 {
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-home {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .card-home {
+    width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .card-home{
+    width: 800px;
+  }
+}

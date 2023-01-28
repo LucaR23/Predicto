@@ -1,0 +1,145 @@
+@import "../../colors.scss";
+
+/* Nav Style */
+.nav-link {
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+.navbar-collapse {
+  &.show {
+    min-height: 90vh;
+  }
+}
+.nav-svg-github {
+  height: 40px;
+  width: 40px;
+  margin-left: 6px;
+  color: $white;
+}
+.nav-svg-istat {
+  max-height: 70px;
+  max-width: 100px;
+  margin-left: 6px;
+
+  color: $white;
+}
+.nav-link-font {
+  font-size: 1.3em;
+}
+.nav-footer {
+  position: relative;
+}
+.nav-footer::after,
+.nav-footer::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: $white;
+  width: 130%;
+}
+.nav-footer::after {
+  top: 0;
+  left: -12px;
+}
+.nav-footer::before {
+  bottom: 0;
+  right: -12px;
+}
+
+.nav-copyrigth-text {
+  font-size: 0.8em;
+}
+
+// Hamburger menu with animation
+  $buttonWidth: 30px;
+  $buttonHeight: 26px;
+  $buttonColor: darken(#2b32b2, 15%);
+  $lineThickness: 4px;
+  $transitionSpeed: 0.25s;
+  $transitionEasing: ease-in-out;
+
+  .menu-toggle {
+    position: relative;
+    display: block;
+    width: $buttonWidth;
+    height: $buttonHeight;
+
+    background: transparent;
+    border-top: $lineThickness solid;
+    border-bottom: $lineThickness solid;
+
+    color: $buttonColor;
+    font-size: 0;
+
+    transition: all $transitionSpeed $transitionEasing;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: $lineThickness;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      background: currentColor;
+
+      transform: translate(-50%, -50%);
+      transition: transform $transitionSpeed $transitionEasing;
+    }
+  }
+
+  button:hover {
+    color: lighten($buttonColor, 15%);
+  }
+
+  button.is-active {
+    border-color: transparent;
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  .nav-link-font {
+    position: relative;
+  }
+
+  .nav-link-font:hover::before {
+    width: 100%;
+  }
+
+.active {
+      .nav-link-font::before{
+        width: 100%;
+      }
+    color: $blue-600!important;
+    }
+.text-blue {
+  color: $blue-600!important;
+}
+
+.nav-link-font::before {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  border-radius: 2px;
+  height: 3px;
+  width: 0%;
+  background-color: $blue-600;
+  transition: width 1s ease;
+}

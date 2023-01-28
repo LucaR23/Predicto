@@ -1,0 +1,160 @@
+/* Bootstrap import */
+@import "~bootstrap/scss/bootstrap";
+@import './colors.scss';
+
+body {
+  background-color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.btn-primary {
+  color: black;
+  background-color: $blue-100;
+  border-color: $blue-100;
+
+  &:hover {
+    color: black;
+    background-color: $blue-200;
+    border-color: $blue-200;
+  }
+}
+
+.title-home {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.btn:disabled {
+  background-color: #4a8db7c5;
+  border-color: #4a8db7c5;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.min-h-100 {
+  min-height: 100vh;
+}
+
+.min-h-90 {
+  min-height: 95vh;
+}
+
+.min-h-60 {
+  min-height: 60vh;
+}
+
+/* SVG resize */
+.loading-svg {
+  height: 200px;
+  width: 200px;
+}
+
+.tutorial-svg {
+  height: 20px;
+  width: 20px;
+  color: rgba(255, 255, 255, 0.863);
+  cursor: pointer;
+}
+
+/* BG color */
+.bg-blue {
+  background-color: $blue-600;
+}
+
+.bg-skyblue {
+  background-color: $blue-100;
+}
+
+.bg-custom {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+  &.sky-blue {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./assets/images/background.webp');
+  }
+
+  &.blue {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/images/background02.webp');
+  }
+
+  &.purple {
+    background-image:
+      /* linear-gradient(rgba(76, 60, 221, 0.436), rgba(0, 0, 0, 0.1)),  */ url('./assets/images/background-purple.webp');
+  }
+}
+
+@keyframes waveMovement {
+  from {
+    transform: scaleY(100%);
+  }
+
+  to {
+    transform: scaleY(50%);
+  }
+}
+
+@keyframes circleMovement {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+
+  to {
+    transform: rotate(180deg) scale(0.7);
+  }
+}
+
+#wave {
+  transform-origin: bottom;
+  animation: 3.8s ease-in-out infinite alternate waveMovement;
+}
+
+#wave1 {
+  transform-origin: bottom;
+  animation: 3.5s ease-in-out infinite alternate waveMovement;
+  animation-delay: 0.5s;
+}
+
+#wave2 {
+  transform-origin: bottom;
+  animation: 3s ease-in-out infinite alternate waveMovement;
+  animation-delay: 1s;
+}
+
+#circle {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: 3.8s ease-in-out infinite alternate circleMovement;
+}
+
+#circle1 {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: 3.5s ease-in-out infinite alternate circleMovement;
+}
+
+@media only screen and (min-width: 768px) {
+  .tutorial-svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .title-home {
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../colors.scss';
+
+@media screen and (min-width: 1300px){
+    .w-xxl-80 {
+        width: 80%;
+    }
+}
+
+.link-footer {
+    text-decoration: none;
+    color: $black;
+}

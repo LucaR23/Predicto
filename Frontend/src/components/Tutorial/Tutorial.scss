@@ -1,0 +1,79 @@
+@import '../../colors.scss';
+
+.tutorail-header-step {
+  color: $blue-400;
+}
+
+.tutorial-content-step {
+  margin: 20px;
+}
+
+.tutorial-overlay {
+  position: fixed;
+  /* position the tutorial overlay on top of other content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  /* make the background semi-transparent */
+  z-index: 9999;
+  /* make the tutorial overlay appear on top of other elements */
+  display: flex;
+  /* center the tutorial content horizontally and vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.tutorial-content h1 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.tutorial-content p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+.tutorial-form {
+  margin: 20px;
+  text-align: start;
+}
+
+.highlight {
+  outline: 5px solid rgb(217, 255, 0);
+
+  pointer-events: none;
+}
+
+.tutorial-close-svg {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.tutorial-navigation-step {
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid $blue-400;
+  border-radius: 50%;
+}
+
+.active-nav {
+  box-shadow: 0 0 10px $blue-400;
+  background-color: $blue-400;
+}
+
+@media only screen and (min-width: 768px) {
+  .highlight {
+    z-index: 2;
+  }
+}

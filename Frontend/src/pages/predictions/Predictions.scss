@@ -1,0 +1,60 @@
+@import "../../colors.scss";
+
+.board-p{
+    margin: 0 auto 0 auto;
+    padding-top: 90px!important;
+    background-image: linear-gradient(rgba(76, 60, 221, 0.436), rgba(0, 0, 0, 0.1)), url('../../assets/images/background02.webp');  
+    width: 80%;
+    border: transparent;
+}
+
+.setting {
+    width: 50px;
+    height: 50px;
+    border-radius: 60px;
+    text-align: center;
+}
+
+.chart {
+    width: 50px;
+    height: 50px;
+    border-radius: 60px;
+    text-align: center;
+    .button-text-chart {
+        display: none;
+    }
+}
+
+.chart:hover {
+    width: 50px;
+     .button-text-chart{
+         display: none;
+         font-size: 0.7em;
+
+     }
+ }
+
+.chart-view{
+    width: 90%;
+    min-height: 60vh;
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+.arrow-svg {
+    height: 60px;
+    width: 60px;
+}
+
+
+//Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .chart:hover {
+        width: 100px;
+        .button-text-chart{
+            display: block;
+            font-size: 0.7em;
+        }
+    }
+}
+
+
